@@ -2,7 +2,8 @@
     --pry-color: #662E9B;
     --sec-color: #F9C80E;
     --tri-color: #DDD;
-    --h1-font-sz: 3rem;
+    --h1-font-sz-lg: 3rem;
+    --h1-font-sz-md: 2rem;
     --container-lg: 0 4rem;
     --text-center: center;
     /* --p: */
@@ -24,6 +25,11 @@ header {
     position: relative;
 }
 
+a, a::before, a::after {
+    text-decoration: none;
+    color: var(--sec-color);
+}
+
 .nav {
     position: fixed;
     width: 100vw;
@@ -36,10 +42,14 @@ header {
 }
 
 header h1 {
-    font-size: var(--h1-font-sz);
+    font-size: var(--h1-font-sz-lg);
     text-align: var(--text-center);
     padding-top: 70px;
     margin-bottom: 10px;
+}
+
+.colored-txt {
+    color: var(--pry-color);
 }
 
 .product-page {
@@ -112,7 +122,76 @@ header h1 {
     text-align: left;
 }
 
+.cart-container {
+    height: auto;
+    padding: 0 30px 30px 30px;
+    margin: var(--container-lg);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--tri-color);
+    border-radius: 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; */
+}
+
+.cart-container h1 {
+    font-size: var(--h1-font-sz-md);
+    text-align: left;
+    margin: 15px 0;
+}
+
+.cart-list {
+    list-style: none;
+}
+
 .checkout-btn {
-    width: 20vw;
     margin: 20px auto;
 }
+
+
+/* FORM */
+
+.form-main {
+    padding-top: 70px;
+}
+
+/*.form-container {
+    padding: 20px;
+    margin: var(--container-lg);
+    border-radius: 15px;
+    background-color: var(--tri-color);
+}
+
+label, input {
+    display: block;
+} */
+
+
+.form-container {
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: var(--container-lg);
+    background-color: var(--tri-color);
+    display: flex;
+    flex-direction: column;
+    /* width: 400px; */
+}
+
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.form-btn {
+    text-align: center;
+}
+
